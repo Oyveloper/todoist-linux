@@ -9,6 +9,7 @@ jobs:
       - run: sudo apt update
       - run: sudo apt install rpm
       - run: sudo apt install bsdtar
+      - run: sudo dpkg --add-architecture i386
       - run: sudo apt install wine
       - run: sudo apt install wine32
       - run: make env
