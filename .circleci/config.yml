@@ -22,7 +22,7 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
-      - make push-release
+      - run: make push-release
 
 workflows:
   version: 2
