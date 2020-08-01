@@ -9,6 +9,8 @@ jobs:
       - run: sudo apt update
       - run: sudo apt install rpm
       - run: sudo apt install bsdtar
+      - run: sudo apt install wine
       - run: make env
       - run: make build-all
+      - run: make archive-unpacked
 
