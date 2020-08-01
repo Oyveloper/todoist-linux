@@ -4,9 +4,6 @@ jobs:
   build:
     docker:
       - image: circleci/node:10
-    filters:
-      tags:
-        only: /.*/
     steps:
       - checkout
       - run: rm -rf dist/*
@@ -19,4 +16,13 @@ jobs:
       - run: make env
       - run: make build-all
       - run: make archive-unpacked
+
+workflows:
+  version: 2
+  build:
+    filters:
+      tags:
+        only: /.*/
+    jobs:
+      - build
 
