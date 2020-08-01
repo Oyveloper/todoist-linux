@@ -32,7 +32,7 @@ workflows:
       - build:
           filters:
             tags:
-              only: /^\d+/
+              only: /^.+/
             branches:
               ignore: /.*/
       - make-release:
