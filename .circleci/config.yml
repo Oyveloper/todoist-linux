@@ -13,7 +13,6 @@ jobs:
       - run: sudo apt install bsdtar
       - run: sudo apt install wine
       - run: sudo apt install wine32
-      - run: sudo npm install -g github-release-cli
       - run: make env
       - run: make build-all
       - run: make archive-unpacked
@@ -23,6 +22,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
+      - run: sudo npm install -g github-release-cli
       - run: make push-release
 
 workflows:
