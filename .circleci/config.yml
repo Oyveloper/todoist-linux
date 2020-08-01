@@ -33,9 +33,9 @@ workflows:
   make-release:
     jobs:
       - make-release:
-        requires:
-          - build
-        filters:
-          tags:
-            only: /.*/
+          requires:
+            - build
+          filters:
+            tags:
+              only: /.*/
 
