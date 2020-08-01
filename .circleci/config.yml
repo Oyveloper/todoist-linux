@@ -32,7 +32,7 @@ workflows:
       - build:
           filters:
             tags:
-              only: /^.+/
+              only: /^\d.+/
       - make-release:
           requires:
             - build
