@@ -33,7 +33,8 @@ workflows:
           filters:
             tags:
               only: /^\d+/
-              ignore: /^$/
+            branches:
+              ignore: /.*/
       - make-release:
           requires:
             - build
