@@ -38,4 +38,9 @@ workflows:
       - make-release:
           requires:
             - build
+          filters:
+            tags:
+              only: /^.+/
+            branches:
+              ignore: /.*/
 
