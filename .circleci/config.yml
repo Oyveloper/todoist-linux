@@ -7,7 +7,7 @@ jobs:
     steps:
       - checkout
       - run: sudo apt update
-      - run: sudo apt install rpmbuild
+      - run: sudo apt install rpm
       - run: make env
       - run: make build-all
 
