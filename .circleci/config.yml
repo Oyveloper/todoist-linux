@@ -6,6 +6,7 @@ jobs:
       - image: circleci/node:10
     steps:
       - checkout
+      - run: sudo apt install rpmbuild
       - run: make env
       - run: make build-all
 
