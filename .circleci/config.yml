@@ -29,7 +29,7 @@ workflows:
   build:
     jobs:
       - build
-      - push-release:
+      - make-release:
         filters:
           tags:
             only: /.*/
