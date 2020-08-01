@@ -4,8 +4,12 @@ jobs:
   build:
     docker:
       - image: circleci/node:10
+    filters:
+      tags:
+        only: /.*/
     steps:
       - checkout
+      - run: rm -rf dist/*
       - run: sudo dpkg --add-architecture i386
       - run: sudo apt update
       - run: sudo apt install rpm
