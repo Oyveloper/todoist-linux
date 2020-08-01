@@ -22,6 +22,7 @@ jobs:
     docker:
       - image: circleci/node:10
     steps:
+      - checkout
       - run: make push-release
 
 workflows:
@@ -29,6 +30,8 @@ workflows:
   build:
     jobs:
       - build
+  make-release:
+    jobs:
       - make-release:
         filters:
           tags:
